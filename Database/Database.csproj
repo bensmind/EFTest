@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -46,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binding.cs" />
     <Compile Include="MigrationContext.cs" />
     <Compile Include="Migrations\201503171827590_Initial.cs" />
     <Compile Include="Migrations\201503171827590_Initial.Designer.cs">
@@ -54,6 +58,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\OneModel.cs" />
     <Compile Include="Models\TwoModel.cs" />
+    <Compile Include="Services\Base\RepoBase.cs" />
+    <Compile Include="Services\OneService.cs" />
     <Compile Include="TwoContext.cs" />
     <Compile Include="OneContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +73,7 @@
       <DependentUpon>201503171827590_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
